@@ -1,0 +1,27 @@
+Make a mongo database (db name used in this example 'myappdb')
+then make a collection for contactlens and sunglasses
+In terminal
+--> mongo
+--> use database-name  or use myappdb
+
+1) create a appcontactlens document inside your database
+"appcontactlens" is same name as to of schema (i.e. "appcontactlens.js")
+
+--> db.appcontactlens.insert({ "price": 15, "brand":"abc", "type":"type1", "description":"desc_1","name":"name1", "ratings": 5, "color":"black" })
+--> db.appcontactlens.insert({ "price": 10, "brand":"def, "type":"type2", "description":"desc_2","name":"name2", "ratings": 4, "color":"grey" })
+--> db.appcontactlens.insert({ "price": 12, "brand":"ghi", "type":"type3", "description":"desc_3","name":"name3", "ratings": 3, "color":"red" })
+--> db.appcontactlens.insert({ "price": 11, "brand":"jkl", "type":"type4", "description":"desc_4","name":"name4", "ratings": 2, "color":"yellow" })
+--> db.appcontactlens.insert({ "price": 20, "brand":"mno", "type":"type5", "description":"desc_5","name":"name5", "ratings": 5, "color":"black" })
+
+output will create 5 records in appcontactlens document.
+
+2) create a appsunglasses document inside your database
+"appcontactlens" is same name as to of schema (i.e. "appsunglass.js")
+
+--> db.sungl.insert({ "price":1545, "rating": 5, "frame":"black", "gender":"male", "brand":"ABC", "type":"Aviator", "size":"medium", "description":"desc1", "name":"ABC sunglasses" })
+--> db.sungl.insert({ "price":500, "rating": 4, "frame":"grey", "gender":"female", "brand":"DEF", "type":"Cateyes", "size":"medium", "description":"desc2", "name":"DEF sunglasses" })
+--> db.sungl.insert({ "price":235, "rating": 3, "frame":"brown", "gender":"male", "brand":"GHI", "type":"Mayfarer", "size":"medium", "description":"desc3", "name":"GHI sunglasses" })
+--> db.sungl.insert({ "price":300, "rating": 2, "frame":"grey", "gender":"female", "brand":"JKL", "type":"Aviator", "size":"small", "description":"desc4", "name":"JKL sunglasses" })
+--> db.sungl.insert({ "price":1850, "rating": 1, "frame":"black", "gender":"male", "brand":"MNO", "type":"Cateyes", "size":"large", "description":"desc5", "name":"MNO sunglasses" })
+
+output will create 5 records in appcontactlens document.
