@@ -23,7 +23,7 @@ l||(a.returnValue=!1)}};(function(){window.addEventListener?(this.addEventListen
 var messageContainer, submitButton;
 var pseudo = "";
 
-// Init
+// Initialization
 $(function() {
 	messageContainer = $('#messageInput');
 	submitButton = $("#submit");
@@ -32,14 +32,14 @@ $(function() {
 	$("#alertPseudo").hide();
 	$('#modalPseudo').modal('show');
 	$("#pseudoSubmit").click(function() {setPseudo()});
-	$("#chatEntries").slimScroll({height: '400px'});  /*600px*/
+	$("#chatEntries").slimScroll({height: '400px'});  
 	submitButton.click(function() {sentMessage();});
 	setHeight();
 	$('#messageInput').keypress(function (e) {
 	if (e.which == 13) {sentMessage();}});
 });
 
-//Socket.io
+//Socket.io connections
 var socket = io.connect();
 socket.on('connect', function() {
 	console.log('connected');
@@ -47,14 +47,14 @@ socket.on('connect', function() {
 socket.on('nbUsers', function(msg) {
 	$("#nbUsers").html(msg.nb);
 });
-socket.on('message', function(data) {		//we can receive incoming messages and this time we'll print them on the screen
+socket.on('message', function(data) {		
 	addMessage(data['message'], data['pseudo'], new Date().toISOString(), false);
-	console.log(data);  			//the packet that is sent to the client is an array containing the message and the pseudo
+	console.log(data);  			
 });
-var quickstart = require('/home/osboxes/Chatbot/node-wit/examples/quickstart.js');      //----integrate UI with interactive(iuwi) start-1
-//Help functions
-function sentMessage() {			//to send a new message
-	if (messageContainer.val() != "") 	//verify that our textarea is not empty
+var quickstart = require('/home/osboxes/Chatbot/node-wit/examples/quickstart.js');    
+
+function sentMessage() {			
+	if (messageContainer.val() != "") 	
 	{
 		if (pseudo == "") 
 		{
@@ -63,19 +63,19 @@ function sentMessage() {			//to send a new message
 		else 
 		{
 			console.log("testing2345677");
-			socket.emit('message', messageContainer.val());  // send a packet named "message" to the server which contains the 
-//message text we print it on the screen with our "addMessage" function, and finally we remove all the text from the textarea.
+			socket.emit('message', messageContainer.val());  
 			addMessage(messageContainer.val(), "Me", new Date().toISOString(), true);  
 			messageContainer.val('');
 			submitButton.button('loading');
 		}
 	}
 }
-function addMessage(msg, pseudo, date, self) {		//add a message to the screen with the user's pseudo
+
+function addMessage(msg, pseudo, date, self) {	
 	if(self) var classDiv = "row message self";
 	else var classDiv = "row message";
 	$("#chatEntries").append('<div class="'+classDiv+'"><p class="infos"><span class="pseudo">'+pseudo+'</span>, <time class="date" 	title="'+date+'">'+date+'</time></p><p>' + msg + '</p></div>');
-	time();		//uses the append function from jQuery to add a div at the end of the #chatEntries div 
+	time();		
 }
 
 function bindButton() {
@@ -85,14 +85,15 @@ function bindButton() {
 		else submitButton.button('reset');
 	});
 }
-function setPseudo() {		//sends the pseudo to the server and show the textarea and the submit button.
+
+function setPseudo() {		
 	if ($("#pseudoInput").val() != "")
 	{
 		socket.emit('setPseudo', $("#pseudoInput").val());
 		socket.on('pseudoStatus', function(data){
 			if(data == "ok")
 			{
-				$('#modalPseudo').modal('hide');  // hide the pseudo setting controls when it's sent to the server.
+				$('#modalPseudo').modal('hide'); 
 				$("#alertPseudo").hide();		
 				pseudo = $("#pseudoInput").val();
 			}
@@ -103,12 +104,14 @@ function setPseudo() {		//sends the pseudo to the server and show the textarea a
 		})
 	}
 }
+
 function time() {
 	$("time").each(function(){
 		$(this).text($.timeago($(this).attr('title')));
 	});
 }
+
 function setHeight() {
-	$(".slimScrollDiv").height('403');	/*textarea to add messages*/
+	$(".slimScrollDiv").height('403');	
 	$(".slimScrollDiv").css('overflow', 'visible')
 }
