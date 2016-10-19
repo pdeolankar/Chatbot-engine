@@ -6,7 +6,7 @@ wit.ai's chatbot support.
 
 There are very few steps that I followed...
 Step 1: Create a story on wit.ai, save it, train it and import modules to your local machine.
-Step 2: Make a package.json file (here named by packagejson file), install all dependencies needed.
+Step 2: Make a package.json file, install all dependencies needed.
         Some generic dependencies are like, express, body-parser, isomorphic-fetch, jade, mongojs, mongoose, socket.io and etc.
 Step 3: Make a server.js file
         this file important mostly because it includes packages, libraries, RESTAPI routes, mongoDB connections and socket io connections.
