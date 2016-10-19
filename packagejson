@@ -35,6 +35,6 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "author": "pooja_deolankar",
+  "author": "pdeolankar",
   "license": "ISC"
 }
