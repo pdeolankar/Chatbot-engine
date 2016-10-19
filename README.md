@@ -3,6 +3,7 @@ a chat engine repository
 
 To develop a chatbot or chat engine is very easy, for this project I have used node.js,express, mongoDB and jade and 
 wit.ai's chatbot support.
+This example is a spectacles chatbot which works with sunglasses and contact lens.
 
 There are very few steps that I followed...
 Step 1: Create a story on wit.ai, save it, train it and import modules to your local machine.
