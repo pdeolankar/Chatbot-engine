@@ -461,7 +461,7 @@ sent = sent +  '\t \n <br>' + '\t Brand:\n' + result[mykey].brand + '\t Descript
 
 };
 
-const accessToken = <wit-access-token>;   
+const accessToken = <wit-access-token>;   //replace your wit.ai story token here. My story token is "TRDJGBCFJDNIQDWYZ7FQGRB6IE3CYTRF"
 const client = new Wit({accessToken, actions}); 
 exports.client= client;		
 
