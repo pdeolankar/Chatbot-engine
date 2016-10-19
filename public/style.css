@@ -692,18 +692,18 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 	padding-top: 70px;
 }
 #chatEntries {
-    border: 1px solid grey;  /*grey*/
+    border: 1px solid grey;  
     border-radius: 5px;
     background-color: rgba(0,0,0,.05);
     margin-bottom: 20px;
-    height: 400px;	/*height: 600px;*/
+    height: 400px;	
     box-shadow: 0 0 10px rgba(0,0,0,.5);  
 }
 .message {
 	overflow: hidden;
 	padding: 0 12px;
 	color: black;
-	background: #88BBD6; /* Old browsers - ababab ---66B9BB*/
+	background: #88BBD6; 
 	float: left;
 	margin-left: 0;
 	width: 914px;
@@ -712,20 +712,17 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
     border-bottom:1px solid rgba(0, 0, 0, .1);
 }
 .self {
-	background:  #67AECA; /* Old browsers  - c7c7c7 ---07889B---4484CE*/
+	background:  #67AECA;
 	color: black;
-	text-align: right; /*right*/
+	text-align: right; 
 }
-/*.infos {
-	font-size: 10px;
-	color: #5C5C5C;
-}*/
+
 .btn-group {	
     float: right;
 
     
 }
-#messageInput {		/* textarea to add message */
+#messageInput {		
 	width: 810px;
 	margin-left: 20px;
 }
