@@ -51,7 +51,7 @@ socket.on('message', function(data) {
 	addMessage(data['message'], data['pseudo'], new Date().toISOString(), false);
 	console.log(data);  			
 });
-var quickstart = require('/home/osboxes/Chatbot/node-wit/examples/quickstart.js');    
+var quickstart = require('./quickstart.js');    
 
 function sentMessage() {			
 	if (messageContainer.val() != "") 	
@@ -62,7 +62,6 @@ function sentMessage() {
 		}
 		else 
 		{
-			console.log("testing2345677");
 			socket.emit('message', messageContainer.val());  
 			addMessage(messageContainer.val(), "Me", new Date().toISOString(), true);  
 			messageContainer.val('');
