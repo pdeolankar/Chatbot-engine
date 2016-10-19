@@ -6,14 +6,14 @@ var app        = express();
 var bodyParser = require('body-parser'); 
 var mongodb = require('mongodb');	    
 var mongojs = require('mongojs'); 
-var db = mongojs('mongodb://localhost:27017/myappdb'); 
+var db = mongojs('mongodb://localhost:27017/myappdb');   
 var isomorphicfetch = require('isomorphic-fetch'); 
 var nodefetch = require('node-fetch'); 
 var nodeuuid = require('node-uuid');    
-var quickstart = require('/home/osboxes/Chatbot/node-wit/examples/quickstart.js');     
+var quickstart = require('./examples/quickstart.js');     
 
-const {DEFAULT_MAX_STEPS} = require('/home/osboxes/Chatbot/node-wit/lib/config.js'); 
-const logger = require('/home/osboxes/Chatbot/node-wit/lib/log.js'); 
+const {DEFAULT_MAX_STEPS} = require('./node-wit/lib/config.js'); 
+const logger = require('./node-wit/lib/log.js'); 
 const readline = require('readline'); 
 const uuid = require('node-uuid'); 
 let context = typeof initContext === 'object' ? initContext : {}; 
