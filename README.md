@@ -44,4 +44,5 @@ node server.js
 ```
 Open in browser: localhost:9001 or YOUR_IP_ADDRESS:9001
 
-NOTE: Since speech-to-text feature is implemented using webkitspeechrecognition api the app would work fully in Google chrome only(as of now).
+Note:
+Since speech-to-text feature is implemented using webkitspeechrecognition api the app would work fully in Google chrome only(as of now).
