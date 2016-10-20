@@ -45,34 +45,3 @@ node server.js
 Open in browser: localhost:9001 or YOUR_IP_ADDRESS:9001
 
 NOTE: Since speech-to-text feature is implemented using webkitspeechrecognition api the app would work fully in Google chrome only(as of now).
-
-
-
-Basic useful feature list:
-
- * Ctrl+S / Cmd+S to save the file
- * Ctrl+Shift+S / Cmd+Shift+S to choose to save as Markdown or HTML
- * Drag and drop a file into here to load it
- * File contents are saved in the URL so you can share files
-
-
-I'm no good at writing sample / filler text, so go write something yourself.
-
-Look, a list!
-
- * foo
- * bar
- * baz
-
-And here's some code! :+1:
-
-```javascript
-$(function(){
-  $('div').html('I am a div.');
-});
-```
-
-
-#### Note:
-Since speech-to-text feature is implemented using webkitspeechrecognition api the app would work fully in Google chrome only (as of now).
-
